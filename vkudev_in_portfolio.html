@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vkudev.in — Vineeth K.U. | DevOps & DevSecOps Consultant</title>
+<meta name="description" content="Vineeth K.U. — Staff DevOps Engineer & DevSecOps Consultant. AWS Dual Pro Certified. Available for remote & freelance worldwide. vkudev.in">
+<link rel="canonical" href="https://vkudev.in">
+<meta property="og:title" content="Vineeth K.U. — DevOps & DevSecOps Consultant">
+<meta property="og:description" content="Staff DevOps Engineer & DevSecOps Consultant. AWS Dual Pro Certified. 16+ years experience. Available for remote & freelance worldwide.">
+<meta property="og:url" content="https://vkudev.in">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vineeth K.U. | vkudev.in">
+<meta name="keywords" content="DevOps Engineer, DevSecOps Consultant, AWS Consultant, Cloud Engineer, Freelance DevOps, Remote DevOps, Vineeth KU, vkudev.in">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Bricolage+Grotesque:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F5F2EC;
+  --bg2: #EDE9E0;
+  --ink: #1A1A1A;
+  --ink2: #3D3D3D;
+  --muted: #888;
+  --accent: #C8371A;
+  --accent2: #1A5C3A;
+  --accent3: #1A3A5C;
+  --warn: #D4900A;
+  --border: #D4CFC5;
+  --mono: 'IBM Plex Mono', monospace;
+  --head: 'Bricolage Grotesque', sans-serif;
+  --body: 'Inter', sans-serif;
+  --r: 0px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);overflow-x:hidden;}
+
+/* NOISE TEXTURE */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:0.4;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 48px;
+  background:rgba(245,242,236,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-brand{
+  display:flex;align-items:center;gap:12px;
+}
+.nav-logo-box{
+  width:36px;height:36px;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+}
+.nav-logo-box span{
+  font-family:var(--mono);font-size:12px;
+  color:var(--bg);font-weight:600;letter-spacing:-1px;
+}
+.nav-name{font-family:var(--head);font-size:15px;font-weight:700;color:var(--ink);}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{
+  font-family:var(--mono);font-size:10px;
+  color:var(--muted);text-decoration:none;
+  letter-spacing:1.5px;text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{
+  font-family:var(--mono);font-size:10px;
+  color:var(--bg);background:var(--accent);
+  padding:8px 18px;text-decoration:none;
+  letter-spacing:1.5px;text-transform:uppercase;
+  transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--ink);}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 420px;
+  padding:120px 48px 80px;
+  gap:60px;
+  align-items:center;
+  max-width:1400px;margin:0 auto;
+}
+.hero-left{}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:10px;
+  color:var(--accent2);letter-spacing:3px;
+  text-transform:uppercase;margin-bottom:28px;
+  border:1px solid var(--accent2);
+  padding:5px 14px;
+}
+.hero-eyebrow::before{content:'◆';font-size:8px;}
+.hero h1{
+  font-family:var(--head);
+  font-size:clamp(56px,6vw,96px);
+  font-weight:800;line-height:0.92;
+  letter-spacing:-3px;
+  margin-bottom:8px;
+}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero-role{
+  font-family:var(--mono);font-size:11px;
+  color:var(--muted);letter-spacing:3px;
+  text-transform:uppercase;
+  margin:20px 0 32px;
+  padding-left:2px;
+}
+.hero-desc{
+  font-size:17px;color:var(--ink2);
+  line-height:1.75;max-width:520px;
+  margin-bottom:44px;font-weight:300;
+}
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:44px;
+}
+.badge{
+  font-family:var(--mono);font-size:9px;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:5px 12px;
+  border:1px solid var(--border);
+  color:var(--ink2);
+}
+.badge.red{border-color:var(--accent);color:var(--accent);background:rgba(200,55,26,0.05);}
+.badge.green{border-color:var(--accent2);color:var(--accent2);background:rgba(26,92,58,0.05);}
+.badge.blue{border-color:var(--accent3);color:var(--accent3);background:rgba(26,58,92,0.05);}
+.badge.warn{border-color:var(--warn);color:var(--warn);background:rgba(212,144,10,0.05);}
+
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  font-family:var(--mono);font-size:10px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:13px 28px;text-decoration:none;
+  transition:all 0.2s;display:inline-block;
+}
+.btn-dark{background:var(--ink);color:var(--bg);}
+.btn-dark:hover{background:var(--accent);}
+.btn-ghost{
+  background:transparent;color:var(--ink);
+  border:1px solid var(--border);
+}
+.btn-ghost:hover{border-color:var(--ink);}
+
+/* HERO RIGHT — SECURITY TERMINAL */
+.hero-right{}
+.terminal{
+  background:var(--ink);
+  border:1px solid #333;
+  overflow:hidden;
+}
+.terminal-bar{
+  display:flex;align-items:center;gap:7px;
+  padding:12px 16px;
+  background:#111;
+  border-bottom:1px solid #222;
+}
+.dot{width:11px;height:11px;border-radius:50%;}
+.dot.r{background:#FF5F57;}
+.dot.y{background:#FEBC2E;}
+.dot.g{background:#28C840;}
+.terminal-title{
+  font-family:var(--mono);font-size:10px;
+  color:#555;letter-spacing:1px;
+  margin-left:8px;
+}
+.terminal-body{padding:20px 20px;font-family:var(--mono);font-size:11px;line-height:2;}
+.t-line{display:flex;gap:10px;align-items:flex-start;}
+.t-prompt{color:#555;flex-shrink:0;}
+.t-cmd{color:#E8E8E8;}
+.t-out{color:#888;padding-left:20px;font-size:10px;}
+.t-ok{color:#28C840;}
+.t-warn{color:#FEBC2E;}
+.t-err{color:#FF5F57;}
+.t-cyan{color:#5AC8FA;}
+.t-comment{color:#555;font-style:italic;}
+.cursor{
+  display:inline-block;width:7px;height:13px;
+  background:#E8E8E8;
+  animation:blink 1s step-end infinite;
+  vertical-align:text-bottom;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* STATS BAR */
+.stats-bar{
+  background:var(--ink);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:3px solid var(--accent);
+}
+.stat-item{
+  padding:40px 32px;
+  border-right:1px solid #2A2A2A;
+  text-align:center;
+}
+.stat-item:last-child{border-right:none;}
+.stat-n{
+  font-family:var(--head);font-size:52px;
+  font-weight:800;color:var(--bg);
+  line-height:1;
+}
+.stat-n span{font-size:28px;color:var(--accent);}
+.stat-l{
+  font-family:var(--mono);font-size:9px;
+  color:#666;letter-spacing:2px;
+  text-transform:uppercase;margin-top:6px;
+}
+
+/* SECTION WRAPPER */
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;}
+
+/* SECTION HEADERS */
+.sec{padding:100px 0;}
+.sec-header{
+  display:flex;align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:60px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border);
+  flex-wrap:wrap;gap:20px;
+}
+.sec-kicker{
+  font-family:var(--mono);font-size:9px;
+  color:var(--muted);letter-spacing:4px;
+  text-transform:uppercase;margin-bottom:10px;
+}
+.sec-title{
+  font-family:var(--head);
+  font-size:clamp(32px,3.5vw,52px);
+  font-weight:800;letter-spacing:-1.5px;
+  line-height:1.05;
+}
+.sec-count{
+  font-family:var(--mono);font-size:11px;
+  color:var(--muted);letter-spacing:2px;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+}
+.svc{
+  background:var(--bg);
+  padding:36px 30px;
+  transition:background 0.25s;
+  position:relative;
+  overflow:hidden;
+}
+.svc:hover{background:var(--bg2);}
+.svc-top{
+  display:flex;justify-content:space-between;
+  align-items:flex-start;margin-bottom:20px;
+}
+.svc-icon{font-size:24px;}
+.svc-num{
+  font-family:var(--mono);font-size:10px;
+  color:var(--border);letter-spacing:1px;
+}
+.svc-name{
+  font-family:var(--head);font-size:18px;
+  font-weight:700;margin-bottom:12px;
+  color:var(--ink);
+}
+.svc-desc{font-size:13px;color:var(--muted);line-height:1.7;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px;}
+.stag{
+  font-family:var(--mono);font-size:8px;
+  color:var(--muted);background:var(--bg2);
+  border:1px solid var(--border);
+  padding:2px 7px;letter-spacing:1px;
+}
+.svc.highlight{background:var(--ink);}
+.svc.highlight:hover{background:#111;}
+.svc.highlight .svc-name{color:var(--bg);}
+.svc.highlight .svc-num{color:#444;}
+.svc.highlight .svc-desc{color:#888;}
+.svc.highlight .stag{background:#1A1A1A;border-color:#333;color:#666;}
+.svc.highlight .svc-icon-big{font-size:32px;margin-bottom:20px;display:block;}
+.svc-accent-bar{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--accent);
+}
+
+/* SECURITY FOCUS */
+.security-section{
+  background:var(--ink);
+  color:var(--bg);
+  padding:100px 0;
+}
+.security-inner{max-width:1200px;margin:0 auto;padding:0 48px;}
+.sec-header-dark{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:60px;padding-bottom:24px;
+  border-bottom:1px solid #2A2A2A;flex-wrap:wrap;gap:20px;
+}
+.sec-kicker-dark{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;
+}
+.sec-title-dark{
+  font-family:var(--head);
+  font-size:clamp(32px,3.5vw,52px);
+  font-weight:800;letter-spacing:-1.5px;color:var(--bg);
+}
+.sec-title-dark em{font-style:normal;color:var(--accent);}
+
+.security-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;
+}
+.sec-left{}
+.threat-list{list-style:none;}
+.threat-item{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:20px 0;border-bottom:1px solid #1E1E1E;
+}
+.threat-icon{
+  width:40px;height:40px;flex-shrink:0;
+  background:#1A1A1A;border:1px solid #2A2A2A;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+}
+.threat-name{
+  font-family:var(--head);font-size:15px;
+  font-weight:700;color:var(--bg);margin-bottom:4px;
+}
+.threat-desc{font-size:12px;color:#666;line-height:1.6;}
+.threat-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.ttool{
+  font-family:var(--mono);font-size:8px;
+  color:var(--accent);background:rgba(200,55,26,0.1);
+  border:1px solid rgba(200,55,26,0.2);
+  padding:2px 7px;letter-spacing:1px;
+}
+
+.compliance-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  margin-bottom:32px;
+}
+.comp-card{
+  background:#0D0D0D;border:1px solid #1E1E1E;
+  padding:20px;
+  border-left:3px solid var(--accent);
+}
+.comp-name{
+  font-family:var(--head);font-size:15px;
+  font-weight:700;color:var(--bg);margin-bottom:6px;
+}
+.comp-desc{font-size:11px;color:#666;line-height:1.6;}
+
+.pipeline-diagram{
+  background:#0D0D0D;border:1px solid #1E1E1E;
+  padding:24px;margin-top:32px;
+}
+.pipeline-title{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.pipeline-steps{
+  display:flex;align-items:center;
+  flex-wrap:wrap;gap:0;
+}
+.pipe-step{
+  display:flex;flex-direction:column;align-items:center;
+  gap:6px;flex:1;min-width:80px;
+}
+.pipe-icon{
+  width:44px;height:44px;
+  background:#1A1A1A;border:1px solid #2A2A2A;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+  position:relative;
+}
+.pipe-icon.secure{border-color:rgba(200,55,26,0.4);}
+.pipe-label{
+  font-family:var(--mono);font-size:8px;
+  color:#555;letter-spacing:1px;text-transform:uppercase;
+  text-align:center;
+}
+.pipe-arrow{
+  font-family:var(--mono);color:#2A2A2A;
+  font-size:14px;flex-shrink:0;
+  margin-top:-18px;
+}
+
+/* SKILLS */
+.skills-layout{
+  display:grid;grid-template-columns:2fr 1fr;gap:60px;
+}
+.skill-category{margin-bottom:32px;}
+.skill-cat-header{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.skill-cat-icon{font-size:14px;}
+.skill-cat-name{
+  font-family:var(--mono);font-size:9px;
+  color:var(--muted);letter-spacing:3px;text-transform:uppercase;
+}
+.pills{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{
+  font-family:var(--mono);font-size:9px;
+  padding:5px 12px;letter-spacing:1px;
+  border:1px solid var(--border);
+  color:var(--ink2);
+  cursor:default;transition:all 0.2s;
+}
+.pill:hover{border-color:var(--ink);color:var(--ink);}
+.pill.r{border-color:rgba(200,55,26,0.3);color:var(--accent);background:rgba(200,55,26,0.04);}
+.pill.g{border-color:rgba(26,92,58,0.3);color:var(--accent2);background:rgba(26,92,58,0.04);}
+.pill.b{border-color:rgba(26,58,92,0.3);color:var(--accent3);background:rgba(26,58,92,0.04);}
+.pill.w{border-color:rgba(212,144,10,0.3);color:var(--warn);background:rgba(212,144,10,0.04);}
+
+.level-list{list-style:none;}
+.level-item{
+  display:flex;justify-content:space-between;
+  align-items:center;padding:12px 0;
+  border-bottom:1px solid var(--border);
+}
+.level-name{font-size:13px;color:var(--ink2);}
+.level-bar-wrap{
+  display:flex;align-items:center;gap:10px;
+}
+.level-bar{
+  width:80px;height:3px;background:var(--border);
+  position:relative;
+}
+.level-fill{
+  height:100%;background:var(--ink);
+  position:absolute;left:0;top:0;
+}
+.level-fill.expert{width:95%;background:var(--accent);}
+.level-fill.advanced{width:80%;}
+.level-fill.intermediate{width:60%;background:var(--muted);}
+
+/* EXPERIENCE */
+.exp-timeline{position:relative;}
+.exp-item{
+  display:grid;grid-template-columns:200px 1fr;
+  gap:40px;padding:40px 0;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.exp-meta{}
+.exp-period{
+  font-family:var(--mono);font-size:10px;
+  color:var(--accent);letter-spacing:1px;margin-bottom:6px;
+}
+.exp-co{font-size:12px;color:var(--muted);line-height:1.5;}
+.exp-mode{
+  display:inline-block;margin-top:8px;
+  font-family:var(--mono);font-size:8px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:3px 8px;
+  border:1px solid var(--accent2);color:var(--accent2);
+  background:rgba(26,92,58,0.05);
+}
+.exp-content{}
+.exp-title{
+  font-family:var(--head);font-size:22px;
+  font-weight:800;margin-bottom:4px;letter-spacing:-0.5px;
+}
+.exp-summary{
+  font-size:13px;color:var(--muted);
+  margin-bottom:16px;font-style:italic;
+}
+.exp-list{list-style:none;}
+.exp-list li{
+  font-size:13px;color:var(--ink2);
+  line-height:1.7;padding-left:16px;
+  position:relative;margin-bottom:7px;
+}
+.exp-list li::before{
+  content:'→';position:absolute;left:0;
+  color:var(--accent);font-size:11px;top:1px;
+}
+.exp-list li strong{color:var(--ink);}
+
+/* CERTS */
+.certs-layout{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.cert{
+  border:1px solid var(--border);
+  padding:28px 24px;
+  background:var(--bg);
+  transition:border-color 0.2s,transform 0.2s;
+  position:relative;
+}
+.cert:hover{border-color:var(--ink);transform:translateY(-2px);}
+.cert-top{
+  display:flex;justify-content:space-between;
+  margin-bottom:16px;
+}
+.cert-icon{font-size:24px;}
+.cert-level{
+  font-family:var(--mono);font-size:8px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:3px 8px;
+  border:1px solid var(--border);color:var(--muted);
+}
+.cert-level.pro{border-color:var(--accent);color:var(--accent);}
+.cert-name{
+  font-family:var(--head);font-size:15px;
+  font-weight:700;margin-bottom:6px;color:var(--ink);
+}
+.cert-id{
+  font-family:var(--mono);font-size:9px;
+  color:var(--muted);letter-spacing:1px;
+}
+
+/* CONTACT */
+.contact-section{
+  background:var(--ink);
+  padding:100px 0;
+}
+.contact-inner{max-width:1200px;margin:0 auto;padding:0 48px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.contact-left{}
+.contact-kicker{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;
+}
+.contact-title{
+  font-family:var(--head);
+  font-size:clamp(36px,4vw,64px);
+  font-weight:800;letter-spacing:-2px;
+  color:var(--bg);line-height:1.0;margin-bottom:24px;
+}
+.contact-title em{font-style:normal;color:var(--accent);}
+.contact-desc{font-size:15px;color:#888;line-height:1.75;margin-bottom:36px;font-weight:300;}
+.avail{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:10px;
+  color:#28C840;letter-spacing:2px;text-transform:uppercase;
+  border:1px solid rgba(40,200,64,0.3);
+  padding:10px 20px;background:rgba(40,200,64,0.05);
+}
+.avail-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#28C840;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.3;transform:scale(0.7);}}
+
+.contact-right{}
+.contact-form-title{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:24px;
+}
+.contact-items{list-style:none;}
+.contact-items li{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 0;border-bottom:1px solid #1A1A1A;
+}
+.contact-items li:first-child{border-top:1px solid #1A1A1A;}
+.c-icon{
+  width:36px;height:36px;
+  background:#111;border:1px solid #222;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;
+}
+.c-label{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:3px;
+}
+.c-value{font-size:13px;color:var(--bg);}
+.c-value a{color:var(--bg);text-decoration:none;transition:color 0.2s;}
+.c-value a:hover{color:var(--accent);}
+
+.platforms{margin-top:36px;}
+.platforms-title{
+  font-family:var(--mono);font-size:9px;
+  color:#555;letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.platform-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.plat{
+  font-family:var(--mono);font-size:9px;
+  color:#888;background:#0D0D0D;
+  border:1px solid #1E1E1E;
+  padding:6px 14px;letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  border-top:1px solid #111;
+  padding:24px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+footer span{
+  font-family:var(--mono);font-size:9px;
+  color:#444;letter-spacing:2px;text-transform:uppercase;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero{grid-template-columns:1fr;padding:100px 32px 60px;}
+  .hero-right{display:none;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .security-grid{grid-template-columns:1fr;}
+  .skills-layout{grid-template-columns:1fr;}
+  .certs-layout{grid-template-columns:repeat(2,1fr);}
+  .contact-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  nav{padding:14px 20px;}
+  .nav-links{display:none;}
+  .hero{padding:90px 20px 50px;}
+  .wrap{padding:0 20px;}
+  .security-inner{padding:0 20px;}
+  .contact-inner{padding:0 20px;}
+  footer{padding:20px;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .services-grid{grid-template-columns:1fr;}
+  .compliance-grid{grid-template-columns:1fr;}
+  .certs-layout{grid-template-columns:1fr;}
+  .exp-item{grid-template-columns:1fr;gap:12px;}
+  .pipeline-steps{gap:4px;}
+  .pipe-arrow{display:none;}
+  .sec{padding:60px 0;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo-box"><span>VKU</span></div>
+    <span class="nav-name">Vineeth K.U. <span style="color:var(--accent);font-size:12px;font-family:var(--mono);">· vkudev.in</span></span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#security">Security</a>
+    <a href="#skills">Stack</a>
+    <a href="#experience">Experience</a>
+    <a href="#certs">Certs</a>
+  </div>
+  <a href="#contact" class="nav-cta">Hire Me →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">vkudev.in — Open to Remote & Freelance Worldwide</div>
+    <h1>VINEETH<br><em>K.U.</em></h1>
+    <div class="hero-role">Staff DevOps Engineer &nbsp;·&nbsp; DevSecOps Consultant &nbsp;·&nbsp; Cloud Architect</div>
+    <p class="hero-desc">
+      16+ years securing and scaling cloud infrastructure on AWS. I help teams ship faster, cut costs, and stay secure — from CI/CD to compliance. Available for full-time remote roles, freelance projects, and consulting retainers.
+    </p>
+    <div class="hero-badges">
+      <span class="badge red">AWS DevOps Pro</span>
+      <span class="badge red">AWS SA Pro</span>
+      <span class="badge green">RHCE</span>
+      <span class="badge blue">Azure AZ-900</span>
+      <span class="badge warn">SOC 2 Compliant</span>
+      <span class="badge warn">SSPA Compliant</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-dark">⚡ Hire Me</a>
+      <a href="#services" class="btn btn-ghost">View Services →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <span class="terminal-title">vkudev.in ~ devops-audit.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">./run-security-scan.sh</span></div>
+        <div class="t-line"><span class="t-out t-comment"># Initiating DevSecOps pipeline...</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ Snyk scan: 0 critical vulnerabilities</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ AWS WAF rules: active</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ IAM least-privilege: enforced</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ SOC 2 controls: compliant</span></div>
+        <div class="t-line"><span class="t-out t-warn">⚠ Terraform drift: 2 resources</span></div>
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">./deploy-pipeline.sh --env prod</span></div>
+        <div class="t-line"><span class="t-out t-cyan">→ SonarQube gate: PASSED</span></div>
+        <div class="t-line"><span class="t-out t-cyan">→ ECS Fargate deploy: rolling</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ Deployment: SUCCESS (2m 14s)</span></div>
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">./check-dr-status.sh</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ Multi-region failover: ready</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ RDS Multi-AZ: synced</span></div>
+        <div class="t-line"><span class="t-out t-ok">✓ RPO: ~0 min / RTO: &lt;15 min</span></div>
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"><span class="cursor"></span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-n">70<span>%</span></div>
+    <div class="stat-l">Faster Deployments</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">40<span>%</span></div>
+    <div class="stat-l">Cost Reduction</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">60<span>%</span></div>
+    <div class="stat-l">Fewer Incidents</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">16<span>+</span></div>
+    <div class="stat-l">Years Experience</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="wrap">
+<section class="sec" id="services">
+  <div class="sec-header">
+    <div>
+      <div class="sec-kicker">What I Do</div>
+      <div class="sec-title">Freelance &<br>Consulting Services</div>
+    </div>
+    <div class="sec-count">08 Services</div>
+  </div>
+  <div class="services-grid">
+
+    <div class="svc highlight">
+      <div class="svc-accent-bar"></div>
+      <span class="svc-icon-big">🔒</span>
+      <div class="svc-name">DevSecOps Implementation</div>
+      <div class="svc-desc">Security baked into every pipeline stage. Snyk AI vulnerability prioritisation, WAF rules, IAM hardening, and compliance-ready DevSecOps workflows from day one.</div>
+      <div class="svc-tags">
+        <span class="stag">Snyk</span><span class="stag">AWS WAF</span>
+        <span class="stag">IAM</span><span class="stag">SOC 2</span><span class="stag">VAPT</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">🚀</span>
+        <span class="svc-num">02</span>
+      </div>
+      <div class="svc-name">CI/CD Pipeline Design</div>
+      <div class="svc-desc">End-to-end pipeline architecture with quality gates, automated security scanning, and rollback strategies. Proven 70% deployment time reduction.</div>
+      <div class="svc-tags">
+        <span class="stag">Jenkins</span><span class="stag">CodePipeline</span>
+        <span class="stag">SonarQube</span><span class="stag">Git</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">☁️</span>
+        <span class="svc-num">03</span>
+      </div>
+      <div class="svc-name">AWS Architecture & Migration</div>
+      <div class="svc-desc">Cloud readiness assessments, lift-and-shift or cloud-native redesigns, VPC architecture, multi-region failover. Proven 40% cost reduction track record.</div>
+      <div class="svc-tags">
+        <span class="stag">EC2</span><span class="stag">ECS Fargate</span>
+        <span class="stag">RDS</span><span class="stag">Route 53</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">📦</span>
+        <span class="svc-num">04</span>
+      </div>
+      <div class="svc-name">Containers & Microservices</div>
+      <div class="svc-desc">Docker containerisation, ECS Fargate orchestration, auto-scaling configuration, and microservices deployment strategies with zero-downtime deployments.</div>
+      <div class="svc-tags">
+        <span class="stag">Docker</span><span class="stag">ECS Fargate</span>
+        <span class="stag">Kubernetes</span><span class="stag">ALB</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">🧱</span>
+        <span class="svc-num">05</span>
+      </div>
+      <div class="svc-name">Infrastructure as Code</div>
+      <div class="svc-desc">Production-grade CloudFormation and Terraform templates. IaC audits, refactoring, and AI-accelerated development — reducing scripting time by ~35%.</div>
+      <div class="svc-tags">
+        <span class="stag">CloudFormation</span><span class="stag">Terraform</span>
+        <span class="stag">Bash</span><span class="stag">Python</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">🔁</span>
+        <span class="svc-num">06</span>
+      </div>
+      <div class="svc-name">Disaster Recovery Planning</div>
+      <div class="svc-desc">Full DR strategy — RTO/RPO definition, runbook authoring, multi-region active-passive failover, AWS Backup automation, and facilitated quarterly drills.</div>
+      <div class="svc-tags">
+        <span class="stag">DR Runbooks</span><span class="stag">RTO/RPO</span>
+        <span class="stag">Multi-Region</span><span class="stag">RDS Multi-AZ</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">📡</span>
+        <span class="svc-num">07</span>
+      </div>
+      <div class="svc-name">Observability & Monitoring</div>
+      <div class="svc-desc">Full-stack observability with Splunk AI anomaly detection, New Relic, CloudWatch, and OpsGenie. MTTR reduction through intelligent log correlation.</div>
+      <div class="svc-tags">
+        <span class="stag">Splunk AI</span><span class="stag">New Relic</span>
+        <span class="stag">CloudWatch</span><span class="stag">OpsGenie</span>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top">
+        <span class="svc-icon">🌐</span>
+        <span class="svc-num">08</span>
+      </div>
+      <div class="svc-name">Hybrid Cloud Networking</div>
+      <div class="svc-desc">Site-to-Site VPN with Palo Alto, AWS VPC design, Akamai CDN, and secure hybrid connectivity between on-premises data centres and AWS.</div>
+      <div class="svc-tags">
+        <span class="stag">VPC</span><span class="stag">Site-to-Site VPN</span>
+        <span class="stag">Palo Alto</span><span class="stag">Akamai CDN</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- SECURITY FOCUS -->
+<div class="security-section" id="security">
+  <div class="security-inner">
+    <div class="sec-header-dark">
+      <div>
+        <div class="sec-kicker-dark">Security Expertise</div>
+        <div class="sec-title-dark">DevSecOps &<br><em>Cloud Security</em></div>
+      </div>
+      <div class="sec-count" style="color:#444;">Security-First Engineering</div>
+    </div>
+
+    <div class="security-grid">
+      <div class="sec-left">
+        <ul class="threat-list">
+          <li class="threat-item">
+            <div class="threat-icon">🔍</div>
+            <div>
+              <div class="threat-name">Vulnerability Management</div>
+              <div class="threat-desc">Snyk AI-powered scanning integrated directly into Jenkins pipelines. Distinguishes exploitable risks from noise — reducing false positives and streamlining security reviews.</div>
+              <div class="threat-tools"><span class="ttool">Snyk</span><span class="ttool">SonarQube</span><span class="ttool">Jenkins</span></div>
+            </div>
+          </li>
+          <li class="threat-item">
+            <div class="threat-icon">🛡️</div>
+            <div>
+              <div class="threat-name">Perimeter & Application Security</div>
+              <div class="threat-desc">AWS WAF rule configuration, Palo Alto Networks firewall management, NACLs and security group hardening for defence-in-depth across all network layers.</div>
+              <div class="threat-tools"><span class="ttool">AWS WAF</span><span class="ttool">Palo Alto</span><span class="ttool">NACLs</span></div>
+            </div>
+          </li>
+          <li class="threat-item">
+            <div class="threat-icon">🔑</div>
+            <div>
+              <div class="threat-name">Identity & Access Management</div>
+              <div class="threat-desc">IAM least-privilege policy design and auditing, role-based access control, service account hardening, and regular access reviews as part of security hygiene.</div>
+              <div class="threat-tools"><span class="ttool">AWS IAM</span><span class="ttool">RBAC</span><span class="ttool">Policy Audits</span></div>
+            </div>
+          </li>
+          <li class="threat-item">
+            <div class="threat-icon">🤖</div>
+            <div>
+              <div class="threat-name">AI-Driven Threat Detection</div>
+              <div class="threat-desc">Splunk AI anomaly detection correlated across ECS Fargate microservices. Intelligent log pattern analysis significantly reduces MTTR for production security incidents.</div>
+              <div class="threat-tools"><span class="ttool">Splunk AI</span><span class="ttool">CloudWatch</span><span class="ttool">OpsGenie</span></div>
+            </div>
+          </li>
+          <li class="threat-item">
+            <div class="threat-icon">🔬</div>
+            <div>
+              <div class="threat-name">Penetration Testing & VAPT</div>
+              <div class="threat-desc">Regular Vulnerability Assessment and Penetration Testing coordination, security audit facilitation, and remediation tracking as part of ongoing compliance programs.</div>
+              <div class="threat-tools"><span class="ttool">VAPT</span><span class="ttool">Security Audits</span><span class="ttool">Remediation</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sec-right">
+        <div class="compliance-grid">
+          <div class="comp-card">
+            <div class="comp-name">SOC 2</div>
+            <div class="comp-desc">Type II controls implementation, evidence collection, and continuous compliance monitoring</div>
+          </div>
+          <div class="comp-card">
+            <div class="comp-name">SSPA</div>
+            <div class="comp-desc">Supplier Security & Privacy Assurance compliance for enterprise vendor programs</div>
+          </div>
+          <div class="comp-card">
+            <div class="comp-name">M365</div>
+            <div class="comp-desc">Microsoft 365 security baseline, DLP policies, and compliance centre configuration</div>
+          </div>
+          <div class="comp-card">
+            <div class="comp-name">RHCE</div>
+            <div class="comp-desc">Red Hat Certified Engineer — Linux security hardening and enterprise system administration</div>
+          </div>
+        </div>
+
+        <div class="pipeline-diagram">
+          <div class="pipeline-title">Secure DevSecOps Pipeline</div>
+          <div class="pipeline-steps">
+            <div class="pipe-step">
+              <div class="pipe-icon">📝</div>
+              <div class="pipe-label">Code<br>Commit</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon secure">🔍</div>
+              <div class="pipe-label">SAST<br>Snyk</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon secure">✅</div>
+              <div class="pipe-label">Quality<br>Gate</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon">📦</div>
+              <div class="pipe-label">Build<br>Docker</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon secure">🛡️</div>
+              <div class="pipe-label">Image<br>Scan</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon">🚀</div>
+              <div class="pipe-label">Deploy<br>ECS</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon">📡</div>
+              <div class="pipe-label">Monitor<br>Splunk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="wrap">
+<section class="sec" id="skills">
+  <div class="sec-header">
+    <div>
+      <div class="sec-kicker">Technical Stack</div>
+      <div class="sec-title">Skills &<br>Technologies</div>
+    </div>
+  </div>
+  <div class="skills-layout">
+    <div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">☁️</span><span class="skill-cat-name">Cloud Platforms</span></div>
+        <div class="pills">
+          <span class="pill b">AWS EC2</span><span class="pill b">ECS Fargate</span>
+          <span class="pill b">Elastic Beanstalk</span><span class="pill">VPC</span>
+          <span class="pill">ALB</span><span class="pill">RDS</span><span class="pill">S3</span>
+          <span class="pill">CloudFormation</span><span class="pill">CodePipeline</span>
+          <span class="pill">Route 53</span><span class="pill">AWS Backup</span>
+          <span class="pill">CloudWatch</span><span class="pill">Microsoft Azure</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🔒</span><span class="skill-cat-name">Security & Compliance</span></div>
+        <div class="pills">
+          <span class="pill r">Snyk AI</span><span class="pill r">AWS WAF</span>
+          <span class="pill r">IAM Hardening</span><span class="pill r">VAPT</span>
+          <span class="pill r">SOC 2</span><span class="pill r">SSPA</span>
+          <span class="pill r">M365 Compliance</span>
+          <span class="pill r">NACLs</span><span class="pill r">Security Groups</span>
+          <span class="pill r">DevSecOps</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🚀</span><span class="skill-cat-name">CI/CD & Automation</span></div>
+        <div class="pills">
+          <span class="pill g">Jenkins</span><span class="pill g">AWS CodePipeline</span>
+          <span class="pill">SonarQube</span><span class="pill">Git</span>
+          <span class="pill">Bash</span><span class="pill">Python</span><span class="pill">SVN</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">📦</span><span class="skill-cat-name">Containers & Orchestration</span></div>
+        <div class="pills">
+          <span class="pill g">Docker</span><span class="pill g">ECS Fargate</span>
+          <span class="pill">Kubernetes (CKA prep)</span>
+          <span class="pill">Auto Scaling</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🤖</span><span class="skill-cat-name">AI-Assisted DevOps</span></div>
+        <div class="pills">
+          <span class="pill w">Splunk AI</span><span class="pill w">Snyk AI</span>
+          <span class="pill w">Datadog AI</span>
+          <span class="pill w">GitHub Copilot</span>
+          <span class="pill w">ChatGPT/Claude</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><span class="skill-cat-icon">📊</span><span class="skill-cat-name">Expertise Levels</span></div>
+        <ul class="level-list">
+          <li class="level-item">
+            <span class="level-name">AWS Cloud Architecture</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill expert"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">CI/CD Pipelines</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill expert"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">DevSecOps</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill expert"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">Docker / ECS Fargate</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill expert"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">Linux Administration</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill expert"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">CloudFormation / IaC</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill advanced"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">Terraform</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill intermediate"></div></div></div>
+          </li>
+          <li class="level-item">
+            <span class="level-name">Kubernetes</span>
+            <div class="level-bar-wrap"><div class="level-bar"><div class="level-fill intermediate"></div></div></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience">
+  <div class="sec-header">
+    <div>
+      <div class="sec-kicker">Work History</div>
+      <div class="sec-title">Professional<br>Experience</div>
+    </div>
+    <div class="sec-count">16+ Years</div>
+  </div>
+  <div class="exp-timeline">
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Feb 2021 — Present</div>
+        <div class="exp-co">BHN Rewards<br>(Blackhawk Network)<br>Kozhikode, India</div>
+        <div class="exp-mode">Full Remote · US HQ</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">Staff DevOps Engineer</div>
+        <div class="exp-summary">SaaS rewards platform — full remote, cross-timezone collaboration with US teams</div>
+        <ul class="exp-list">
+          <li>Spearheaded CI/CD with Jenkins & CodePipeline — <strong>reduced deployment time by 70%</strong></li>
+          <li>Integrated SonarQube & Snyk AI into pipelines — <strong>reduced post-deploy issues by 60%</strong></li>
+          <li>Led on-premises to AWS migration — <strong>cut infrastructure costs by 40%</strong></li>
+          <li>Implemented AWS WAF, IAM least-privilege policies; drove <strong>SOC 2, SSPA & M365 compliance</strong> via DevSecOps and VAPT</li>
+          <li>Architected Multi-Region active-passive failover with Route 53 — near-zero RPO</li>
+          <li>Orchestrated Docker workloads on ECS Fargate with auto-scaling</li>
+          <li>Used Splunk AI anomaly detection to <strong>significantly reduce MTTR</strong> for production incidents</li>
+          <li>AI-accelerated IaC generation (ChatGPT/Claude) — <strong>reduced scripting time by ~35%</strong></li>
+          <li>Designed and owned full DR strategy — RTO/RPO, runbooks, quarterly drills</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2016 — Jan 2021</div>
+        <div class="exp-co">Mathrubhumi Printing<br>& Publishing<br>Kozhikode, India</div>
+        <div class="exp-mode">On-Site · Media</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">Support Engineer</div>
+        <div class="exp-summary">National media publisher — AWS infrastructure and cloud migration</div>
+        <ul class="exp-list">
+          <li>Maintained AWS infrastructure for large-scale national media publisher</li>
+          <li>Implemented CI/CD pipelines; led on-premises to AWS migration</li>
+          <li>Configured Akamai CDN + AWS for global latency reduction</li>
+          <li>Enforced cloud security via IAM, NACLs, security groups and vulnerability assessments</li>
+          <li>Developed full DR procedures — Multi-AZ failover, AMI snapshots, periodic DR drills</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Oct 2015 — Jun 2016</div>
+        <div class="exp-co">Codelattice Digital<br>Solutions<br>Kozhikode, India</div>
+        <div class="exp-mode">On-Site · Agency</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">DevOps Engineer</div>
+        <div class="exp-summary">Multi-client AWS automation and cloud migrations</div>
+        <ul class="exp-list">
+          <li>Automated AWS provisioning and orchestration for multiple client workloads</li>
+          <li>Executed on-premises to AWS migration projects and datacenter transitions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2013 — Jul 2015</div>
+        <div class="exp-co">Spectrum Softtech<br>Solutions<br>Kochi, India</div>
+        <div class="exp-mode">On-Site · IT Services</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">Linux Administrator</div>
+        <div class="exp-summary">Linux & AWS environment administration</div>
+        <ul class="exp-list">
+          <li>Administered Linux servers, AWS infrastructure, pfSense firewalls, DNS, web & mail servers</li>
+          <li>Migrated workloads to AWS and provided deployment support across dev and production</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="sec" id="certs">
+  <div class="sec-header">
+    <div>
+      <div class="sec-kicker">Credentials</div>
+      <div class="sec-title">Certifications &<br>Qualifications</div>
+    </div>
+    <div class="sec-count">6 Certs</div>
+  </div>
+  <div class="certs-layout">
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">🏆</span>
+        <span class="cert-level pro">Professional</span>
+      </div>
+      <div class="cert-name">AWS Certified DevOps Engineer – Professional</div>
+      <div class="cert-id">ID: MTRDQYFLFMRQQPKZ</div>
+    </div>
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">🏆</span>
+        <span class="cert-level pro">Professional</span>
+      </div>
+      <div class="cert-name">AWS Certified Solutions Architect – Professional</div>
+      <div class="cert-id">ID: ZFRDRN9BMFRQ145T</div>
+    </div>
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">☁️</span>
+        <span class="cert-level">Associate</span>
+      </div>
+      <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
+      <div class="cert-id">ID: 60P84M4J221415GJ</div>
+    </div>
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">☁️</span>
+        <span class="cert-level">Associate</span>
+      </div>
+      <div class="cert-name">AWS Certified SysOps Administrator – Associate</div>
+      <div class="cert-id">AWS Verified</div>
+    </div>
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">🔵</span>
+        <span class="cert-level">Fundamentals</span>
+      </div>
+      <div class="cert-name">Microsoft Azure Fundamentals AZ-900</div>
+      <div class="cert-id">ID: 993936176</div>
+    </div>
+    <div class="cert">
+      <div class="cert-top">
+        <span class="cert-icon">🔴</span>
+        <span class="cert-level pro">Expert</span>
+      </div>
+      <div class="cert-name">Red Hat Certified Engineer (RHCE)</div>
+      <div class="cert-id">Cert No: 130-022-056</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="contact-kicker">Get in Touch</div>
+        <h2 class="contact-title">Let's Build<br><em>Something</em><br>Secure.</h2>
+        <p class="contact-desc">Open to full-time remote roles, freelance projects, and consulting retainers globally. IST timezone — async-friendly, available across EST/PST overlaps.</p>
+        <div class="avail"><span class="avail-dot"></span> Available Now — vkudev.in — Remote Worldwide</div>
+        <div class="platforms" style="margin-top:32px;">
+          <div class="platforms-title">Find me on</div>
+          <div class="platform-pills">
+            <span class="plat">LinkedIn</span>
+            <span class="plat">Toptal</span>
+            <span class="plat">Upwork</span>
+            <span class="plat">Arc.dev</span>
+            <span class="plat">Gun.io</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-form-title">Contact Details</div>
+        <ul class="contact-items">
+          <li>
+            <div class="c-icon">🌐</div>
+            <div>
+              <div class="c-label">Portfolio Website</div>
+              <div class="c-value"><a href="https://vkudev.in" target="_blank">vkudev.in</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">✉️</div>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-value"><a href="mailto:vineethku001@gmail.com">vineethku001@gmail.com</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">📞</div>
+            <div>
+              <div class="c-label">Phone / WhatsApp</div>
+              <div class="c-value"><a href="tel:+919746009249">+91 9746009249</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">💼</div>
+            <div>
+              <div class="c-label">LinkedIn</div>
+              <div class="c-value"><a href="https://linkedin.com/in/vineethku001" target="_blank">linkedin.com/in/vineethku001</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="c-icon">📍</div>
+            <div>
+              <div class="c-label">Location</div>
+              <div class="c-value">Kozhikode, Kerala, India · IST (UTC+5:30)</div>
+            </div>
+          </li>
+        </ul>
+        <div style="margin-top:32px;">
+          <a href="mailto:vineethku001@gmail.com" class="btn btn-dark" style="display:inline-block;">⚡ Send a Message</a>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--ink);border-top:1px solid #111;padding:24px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#444;letter-spacing:2px;text-transform:uppercase;">© 2026 Vineeth K.U. — DevOps &amp; DevSecOps Consultant</span>
+  <a href="https://vkudev.in" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#C8371A;letter-spacing:2px;text-decoration:none;font-weight:600;">vkudev.in</a>
+  <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#444;letter-spacing:2px;text-transform:uppercase;">Kozhikode, Kerala · Remote Worldwide</span>
+</footer>
+
+</body>
+</html>
